@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f7f2;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #111;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Layout container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Hide default Pelican nav/footer */
+header, footer {
+    display: none;
+}
+
+/* Optional: Center footer if used later */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 2rem;
+}
+
+/* Position name at top-left */
+.top-left-name {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Centered about layout */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Adjust font size for About Me header */
+.about-text h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+/* Profile picture styling */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Text block styling */
+.about-text {
+    max-width: 400px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Social section styling */
+.social-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Icon layout */
+.icon-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+/* Individual icon styling */
+.icon-links a {
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.icon-links a:hover {
+    transform: scale(1.1);
+    color: #444;
+}
