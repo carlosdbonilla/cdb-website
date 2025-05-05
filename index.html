@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./static/custom.css">
 
   <link rel="alternate" type="application/atom+xml" title="Full Atom Feed"
-        href="/feeds/all.atom.xml">
+        href="https://carlosdbonilla.github.io/cdb-website/feeds/all.atom.xml">
   
   <meta name="description" content="Carlos D. Bonilla About Me Hi, I’m Carlos — a Solutions Engineer specializing in cloud, AI, and data analytics. With a background in sales operations and technical consulting, I bridge the gap between business needs and technical execution. At IBM, I focus on cloud infrastructure solutions that help enterprises scale …">
 
@@ -80,7 +80,7 @@
   </div>
 </div>
 
-<!-- Dark/Light Mode Script (mobile + desktop compatible) -->
+<!-- Dark/Light Mode Script (pointerup = smooth cross-device support) -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById('theme-toggle');
@@ -111,8 +111,7 @@
       setTheme('light');
     }
 
-    toggle.addEventListener('click', toggleTheme);
-    toggle.addEventListener('touchend', toggleTheme);
+    toggle.addEventListener('pointerup', toggleTheme);
   });
 </script>
     </div>
