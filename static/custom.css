@@ -19,7 +19,7 @@
 
 /* Base styles */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
