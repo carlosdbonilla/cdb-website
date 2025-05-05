@@ -1,7 +1,7 @@
 # carlosdbonilla.com
 
 <p align="center">
-  <img src="profile-icon.jpg" alt="Carlos D. Bonilla" width="120">
+  <img src="images/profile-icon.jpg" alt="Carlos D. Bonilla" width="120">
 </p>
 
 ## 🌐 Personal Portfolio Website
