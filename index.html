@@ -80,35 +80,39 @@
   </div>
 </div>
 
-<!-- Dark/Light Mode Script with icon switching -->
+<!-- Dark/Light Mode Script (mobile + desktop compatible) -->
 <script>
-  const toggle = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-icon');
-  const savedTheme = localStorage.getItem('theme');
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const savedTheme = localStorage.getItem('theme');
 
-  const setTheme = (theme) => {
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
+    const setTheme = (theme) => {
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+      localStorage.setItem('theme', theme);
+    };
+
+    const toggleTheme = () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    };
+
+    if (savedTheme === 'dark') {
+      setTheme('dark');
     } else {
-      document.documentElement.removeAttribute('data-theme');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
+      setTheme('light');
     }
-    localStorage.setItem('theme', theme);
-  };
 
-  // Initialize theme on page load
-  if (savedTheme === 'dark') {
-    setTheme('dark');
-  } else {
-    setTheme('light');
-  }
-
-  toggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    setTheme(current === 'dark' ? 'light' : 'dark');
+    toggle.addEventListener('click', toggleTheme);
+    toggle.addEventListener('touchend', toggleTheme);
   });
 </script>
     </div>
