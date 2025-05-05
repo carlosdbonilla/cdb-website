@@ -1,6 +1,8 @@
 # carlosdbonilla.com
 
-![Site Preview](https://carlosdbonilla.github.io/cdb-website/)
+<p align="center">
+  <img src="profile-icon.jpg" alt="Carlos D. Bonilla" width="120">
+</p>
 
 ## 🌐 Personal Portfolio Website
 
