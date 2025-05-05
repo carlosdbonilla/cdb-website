@@ -1,13 +1,33 @@
+/* Theme variables */
+:root {
+    --bg-color: #f8f7f2;
+    --text-color: #222;
+    --link-color: #0077cc;
+    --heading-color: #111;
+    --icon-color: black;
+    --icon-hover: #444;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --link-color: #4ea8de;
+    --heading-color: #ffffff;
+    --icon-color: #ccc;
+    --icon-hover: #fff;
+}
+
+/* Base styles */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f8f7f2;
-    color: #222;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
 a {
-    color: #0077cc;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -17,7 +37,7 @@ a:hover {
 
 h1, h2, h3 {
     font-weight: 600;
-    color: #111;
+    color: var(--heading-color);
 }
 
 img {
@@ -37,7 +57,6 @@ header, footer {
     display: none;
 }
 
-/* Optional: Center footer if used later */
 footer {
     text-align: center;
     font-size: 0.85rem;
@@ -45,7 +64,7 @@ footer {
     margin-top: 2rem;
 }
 
-/* Position name at top-left */
+/* Name position */
 .top-left-name {
     position: absolute;
     top: 1.5rem;
@@ -54,7 +73,7 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Centered about layout */
+/* About layout */
 .about-container {
     display: flex;
     flex-direction: row;
@@ -65,13 +84,11 @@ footer {
     flex-wrap: wrap;
 }
 
-/* Adjust font size for About Me header */
 .about-text h2 {
     font-size: 1.5rem;
     line-height: 1.2;
 }
 
-/* Profile picture styling */
 .profile-pic {
     width: 160px;
     height: 160px;
@@ -80,20 +97,18 @@ footer {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Text block styling */
 .about-text {
     max-width: 400px;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-/* Social section styling */
+/* Social icons */
 .social-links {
     text-align: center;
     margin-top: 1rem;
 }
 
-/* Icon layout */
 .icon-links {
     display: flex;
     justify-content: center;
@@ -101,9 +116,8 @@ footer {
     margin-top: 0.8rem;
 }
 
-/* Individual icon styling */
 .icon-links a {
-    color: black;
+    color: var(--icon-color);
     font-size: 1rem;
     text-decoration: none;
     transition: transform 0.2s ease;
@@ -111,5 +125,38 @@ footer {
 
 .icon-links a:hover {
     transform: scale(1.1);
-    color: #444;
+    color: var(--icon-hover);
 }
+/* Theme toggle button */
+#theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 999;
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Icon styling inside toggle */
+#theme-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover animation */
+#theme-toggle:hover #theme-icon {
+    transform: rotate(20deg) scale(1.2);
+}
+
+/* Glow effect when in dark mode (sun icon) */
+[data-theme="dark"] #theme-icon.fa-sun {
+    color: #facc15; /* soft yellow */
+    text-shadow: 0 0 10px rgba(250, 204, 21,
