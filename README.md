@@ -1,6 +1,6 @@
 # carlosdbonilla.com
 
-![Site Preview](https://carlosdbonilla.github.io/cdb-website/images/profile.jpg)
+![Site Preview](https://carlosdbonilla.github.io/cdb-website/)
 
 ## 🌐 Personal Portfolio Website
 
