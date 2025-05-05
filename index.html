@@ -54,7 +54,7 @@
 <p><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet"></p>
 <!-- Theme toggle button with Font Awesome icons -->
 <p><button id="theme-toggle" aria-label="Toggle dark mode">
-  <i id="theme-icon" class="fas fa-moon"></i>
+  <i id="theme-icon" class="fas fa-circle-half-stroke"></i>
 </button></p>
 <div class="top-left-name">Carlos D. Bonilla</div>
 
@@ -93,11 +93,11 @@
       if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+        icon.classList.add('fa-circle-half-stroke');
       } else {
         document.documentElement.removeAttribute('data-theme');
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-circle-half-stroke');
       }
       localStorage.setItem('theme', theme);
     };
@@ -107,6 +107,7 @@
       setTheme(current === 'dark' ? 'light' : 'dark');
     };
 
+    // Set initial icon and theme
     if (savedTheme === 'dark') {
       setTheme('dark');
     } else {
